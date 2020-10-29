@@ -16,7 +16,7 @@ public class StartInstance {
     public static void main(String[] args) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         RuntimeService runtimeService = processEngine.getRuntimeService();
-        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("myProcess");
-        System.out.println(processInstance.getId()  + "->" + processInstance.getDeploymentId() + "->" + processInstance.getActivityId());
+        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("holiday");
+        System.out.println(processInstance.getId() + "->" + processInstance.getDeploymentId() + "->" + processInstance.getActivityId());
     }
 }

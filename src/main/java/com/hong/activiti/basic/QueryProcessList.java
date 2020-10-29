@@ -20,7 +20,7 @@ public class QueryProcessList {
     public static void main(String[] args) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         TaskService taskService = processEngine.getTaskService();
-        List<Task> taskList = taskService.createTaskQuery().processDefinitionKey("myProcess").taskAssignee("lisi").list();
+        List<Task> taskList = taskService.createTaskQuery().processDefinitionKey("holiday").taskAssignee("wangwu").list();
         for (Task task:taskList){
             System.out.println("流程实例ID:" + task.getProcessDefinitionId());
             System.out.println("任务ID:" + task.getId());
@@ -30,11 +30,11 @@ public class QueryProcessList {
 
         System.out.println("=========================");
         // 获取 businessKey
-        Task task = taskService.createTaskQuery().processDefinitionKey("myProcess").taskAssignee("lisi").singleResult();
-        //taskService.complete(task.getId());
-        String processInstanceId = task.getProcessInstanceId();
-        RuntimeService runtimeService = processEngine.getRuntimeService();
-        ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processDefinitionId(processInstanceId).singleResult();
-        System.out.println("businessKey = " + processInstance.getBusinessKey());
+//        Task task = taskService.createTaskQuery().processDefinitionKey("holiday").taskAssignee("lisi").singleResult();
+//        taskService.complete(task.getId());
+//        String processInstanceId = task.getProcessInstanceId();
+//        RuntimeService runtimeService = processEngine.getRuntimeService();
+//        ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processDefinitionId(processInstanceId).singleResult();
+//        System.out.println("businessKey = " + processInstance.getBusinessKey());
     }
 }

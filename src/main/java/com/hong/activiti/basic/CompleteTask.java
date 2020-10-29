@@ -15,6 +15,7 @@ public class CompleteTask {
     public static void main(String[] args) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         TaskService taskService = processEngine.getTaskService();
+        // 这里的taskId 通过 QueryProcessList 查询出来
         String taskId = "7502";
         taskService.complete(taskId);
     }
