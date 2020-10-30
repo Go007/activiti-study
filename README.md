@@ -28,3 +28,7 @@ act_ru_identitylink act_hi_identitylink  会插入下一个节点的参与者
 7-结束任务 CompleteTask
 重复执行第5,6步,流程会自动结束
 表变化情况: 所有 act_ru_* 数据会被清空,act_hi_actinst 会存储所有审批节点操作
+
+# 流程变量：global变量和local变量
+act_ru_variable #当前流程变量表
+act_hi_varinst #历史流程变量表

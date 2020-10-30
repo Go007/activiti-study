@@ -4,14 +4,13 @@ import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.ProcessDefinition;
-import org.activiti.engine.repository.ProcessDefinitionQuery;
 
 import java.util.List;
 
 /**
  * 流程定义查询,比如请假流程被定义了一次，但是部署了多次
  */
-public class ProcessDifinitionQuery {
+public class QueryProcessDefinition {
     public static void main(String[] args) {
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         // 流程定义key
@@ -19,7 +18,7 @@ public class ProcessDifinitionQuery {
         // 获取repositoryService
         RepositoryService repositoryService = processEngine.getRepositoryService();
         // 查询流程定义
-        ProcessDefinitionQuery processDefinitionQuery = repositoryService.createProcessDefinitionQuery();
+        org.activiti.engine.repository.ProcessDefinitionQuery processDefinitionQuery = repositoryService.createProcessDefinitionQuery();
         //遍历查询结果
         List<ProcessDefinition> list = processDefinitionQuery.processDefinitionKey(processDefinitionKey).orderByProcessDefinitionVersion().desc().list();
         for (ProcessDefinition processDefinition : list) {

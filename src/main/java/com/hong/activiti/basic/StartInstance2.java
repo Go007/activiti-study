@@ -24,7 +24,7 @@ public class StartInstance2 {
         variables.put("employee","张三");
         variables.put("deptManager","李四");
         variables.put("generalManager","王五");
-        String processKey = "myProcess";
+        String processKey = "holidayUEL";
         String businessKey = "10";
         ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(processKey,businessKey,variables);
         System.out.println(processInstance.getId()  + "->" + processInstance.getDeploymentId() + "->" + processInstance.getActivityId());
