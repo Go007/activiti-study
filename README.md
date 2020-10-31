@@ -32,3 +32,8 @@ act_ru_identitylink act_hi_identitylink  会插入下一个节点的参与者
 # 流程变量：global变量和local变量
 act_ru_variable #当前流程变量表
 act_hi_varinst #历史流程变量表
+
+# 监听器
+
+# 网关
+排他网关，并行网关，包含网关
