@@ -9,8 +9,8 @@ Activiti7 Demo
 3-流程定义部署  DeployProcess 
 select * from act_ge_bytearray; bpmn 二进制信息
 select * from act_ge_property;  bpmn相关属性
-select * from act_re_deployment 流程定义部署表,记录流程部署信息
-select * from act_re_procdef 流程定义表,记录流程定义信息
+select * from act_re_deployment; 流程定义部署表,记录流程部署信息
+select * from act_re_procdef; 流程定义表,记录流程定义信息
 4-开启流程实例 StartInstance
 select * from act_ru_execution; 流程实例执行表
 select * from act_ru_task; 任务执行表

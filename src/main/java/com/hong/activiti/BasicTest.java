@@ -134,4 +134,23 @@ public class BasicTest {
         String candidateUser = "xiaozhao";
         ActivitiHelper.turnTaskToOtherCandidateUsers(processKey, userId, candidateUser, taskList);
     }
+
+    ///////////////////////////////////流程监听器////////////////////////////////////////
+    @Test
+    public void testListener() {
+        ActivitiHelper.deployProcess("bpmn/holidayListen.bpmn", "请假流程申请(Listen)");
+    }
+
+    @Test
+    public void testListener1() {
+        String processKey = "holidayListen";
+        //流程启动的时候设置流程变量
+        //定义流程变量
+        Map<String, Object> variables = new HashMap<>();
+        //设置流程变量 原理是因为startProcessInstanceByKey存在重载方法
+        variables.put("employee", "张三");
+        variables.put("generalManager", "王五");
+        ActivitiHelper.startProcessInstance(processKey, "10", variables);
+    }
+
 }
