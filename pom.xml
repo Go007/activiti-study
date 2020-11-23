@@ -13,7 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <skipTests>true</skipTests>
-        <activiti.version>7.1.0.M6</activiti.version>
+        <activiti.version>7.0.0.SR1</activiti.version>
     </properties>
 
     <dependencies>
